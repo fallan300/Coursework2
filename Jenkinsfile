@@ -40,8 +40,10 @@ pipeline {
                                 sshagent(['my-ssh-key']) {
                                         echo 'hello'
 					//sh 'kubectl set image deployments/my-deployment kubernetes-bootcamp=fallan300/cw2-server:1.0'
-					sh 'ssh ubuntu@ec2-3-80-21-186.compute-1.amazonaws.com'
-					sh '/snap/bin/kubectl get pods' // Adjust path to where kubectl is installed'
+					sh ''' 
+					ssh ubuntu@ec2-3-80-21-186.compute-1.amazonaws.com
+					kubectl get pods 
+					'''
 				}
 		}
 

@@ -44,7 +44,7 @@ pipeline {
 					ssh ubuntu@ec2-3-80-21-186.compute-1.amazonaws.com << EOF
 					whoami
 					kubectl get pods 
-					kubectl set image deployments/my-deployment my-deployment=fallan300/cw2-server:1.0
+					kubectl set image deployments/my-deployment cw2-server=fallan300/cw2-server:1.0
 					<< EOF
 					'''
 				}

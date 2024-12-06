@@ -39,9 +39,7 @@ pipeline {
 		stage('Deploy') {
                         steps {
                                 sshagent(['my-ssh-key']) {
-                                        echo 'Hello'
 					sh '''
-					whoami 
 					ssh ubuntu@ec2-3-80-21-186.compute-1.amazonaws.com << EOF
 					whoami
 					kubectl get pods 

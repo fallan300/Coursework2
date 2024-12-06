@@ -39,6 +39,7 @@ pipeline {
                         steps {
                                 sshagent(['my-ssh-key']) {
                                         echo 'hello'
+					sh 'kubectl set image deployments/my-deployment kubernetes-bootcamp=fallan300/cw2-server:1.0'
 				}
 		}
 

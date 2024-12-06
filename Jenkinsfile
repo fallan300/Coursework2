@@ -43,7 +43,9 @@ pipeline {
 					ssh ubuntu@ec2-3-80-21-186.compute-1.amazonaws.com << EOF
 					whoami
 					kubectl get pods 
+					echo 'setting new image to Kubernetes'
 					kubectl set image deployments/my-deployment cw2-server=fallan300/cw2-server:${tag} 
+					New image deployed'
 					whoami
 					<< EOF
 					'''

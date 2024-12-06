@@ -42,6 +42,7 @@ pipeline {
 					//sh 'kubectl set image deployments/my-deployment kubernetes-bootcamp=fallan300/cw2-server:1.0'
 					sh ''' 
 					ssh ubuntu@ec2-3-80-21-186.compute-1.amazonaws.com
+					echo whoami
 					kubectl get pods 
 					'''
 				}

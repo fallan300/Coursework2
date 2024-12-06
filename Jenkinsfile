@@ -35,11 +35,6 @@ pipeline {
                                 sh 'docker push fallan300/cw2-server:1.0'
 				}
 		}
-                stage('Deploy') {
-                        steps {
-  //                              sshagent(['jenkins key goes here'])
-//                                        sh 'code to deploy'
-				}
-		}
+
 	}
 }

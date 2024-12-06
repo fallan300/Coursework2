@@ -45,7 +45,7 @@ pipeline {
 					kubectl get pods 
 					echo 'setting new image to Kubernetes'
 					kubectl set image deployments/my-deployment cw2-server=fallan300/cw2-server:${tag} 
-					New image deployed'
+					echo 'New image deployed'
 					whoami
 					<< EOF
 					'''

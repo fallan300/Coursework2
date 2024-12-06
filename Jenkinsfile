@@ -45,7 +45,7 @@ pipeline {
 					kubectl get pods 
 					kubectl set image deployments/my-deployment cw2-server=fallan300/cw2-server:${tag} 
 					whoami
-					EOF
+					<< EOF
 					'''
 				}
 		}

@@ -45,7 +45,7 @@ pipeline {
 					ssh ubuntu@ec2-3-80-21-186.compute-1.amazonaws.com << EOF
 					whoami
 					kubectl get pods 
-					EOF
+					<< EOF
 					'''
 				}
 		}

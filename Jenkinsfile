@@ -37,7 +37,7 @@ pipeline {
 		}
 		stage('Deploy') {
                         steps {
-                                sshagent(['my-ssh-key'])
+                                sshagent(['my-ssh-key']) {
                                         echo 'hello'
 				}
 		}
